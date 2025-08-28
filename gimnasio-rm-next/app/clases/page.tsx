@@ -110,44 +110,50 @@ export default function HomePage() {
   const [showRegisterForm, setShowRegisterForm] = useState(false);
 
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
-      {/* Header */}
-      <header className="bg-gray-800 py-4 px-8 flex justify-between items-center">
-        {/* Logo y nombre del club */}
-        <div className="flex items-center space-x-4">
-          <Image
-            src="/rm-logo.png"
-            alt="RM Training Logo"
-            width={70}
-            height={70}
-            className="rounded-full"
-          />
-           <h1 className="text-5xl font-bold text-center text-red-600 mb-4">
+  <div className="bg-gray-900 min-h-screen text-white">
+    {/* Header */}
+    <header className="bg-gray-800 py-4 px-8 flex justify-between items-center">
+      {/* Logo + título */}
+      <div className="flex items-center space-x-4">
+        <Image
+          src="/rm-logo.png"
+          alt="RM Training Logo"
+          width={70}
+          height={70}
+          className="rounded-full"
+        />
+        <h1
+          className="text-3xl sm:text-5xl font-bold"
+          style={{ color: "#f10d45" }}
+        >
           Training RM
         </h1>
-        </div>
-        {/* Botones de navegación */}
-        <nav className="flex items-center space-x-8">
-          <button
-            onClick={() => {
-              setShowLoginForm(true);
-              setShowRegisterForm(false);
-            }}
-            className="hover:text-red-600 transition-colors"
-          >
-            INICIAR SESION
-          </button>
-          <button
-            onClick={() => {
-              setShowRegisterForm(true);
-              setShowLoginForm(false);
-            }}
-            className="hover:text-red-600 transition-colors"
-          >
-            REGISTRARSE
-          </button>
-        </nav>
-      </header>
+      </div>
+
+      {/* Botones de navegación */}
+      <nav className="flex items-center space-x-8">
+        <button
+          onClick={() => {
+            setShowLoginForm(true);
+            setShowRegisterForm(false);
+          }}
+          className="hover:text-red-600 transition-colors"
+        >
+          INICIAR SESION
+        </button>
+        <button
+          onClick={() => {
+            setShowRegisterForm(true);
+            setShowLoginForm(false);
+          }}
+          className="hover:text-red-600 transition-colors"
+        >
+          REGISTRARSE
+        </button>
+      </nav>
+    </header>
+ 
+
 
       {/* Main Content */}
       <main className="relative w-full h-[calc(100vh-64px)] flex flex-col justify-center items-center p-8">
